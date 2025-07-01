@@ -10,7 +10,7 @@ export const stripeWebhooks = async ( request, response ) => {
     let event;
 
     try {
-        event = stripeInstance.webhooks.constructEvent(request.body, sig, process.env.STRIPE_WEBHOOK_KEY)
+        event = stripeInstance.webhooks.constructEvent(request.body, sig, process.env.STRIPE_WEBHOOK_SECRET)
     } catch (err) {
         response.status(400).send(`webhook Error: ${err.message}`)
     }
@@ -26,7 +26,7 @@ export const stripeWebhooks = async ( request, response ) => {
         });
 
         const { bookingId } = session.data[0].metadata;
-        
+
         // Mark Payment as Paid
         await Booking.findByIdAndUpdate(bookingId, {isPaid: true, paymentMethod: "Stripe"})
     }else{
