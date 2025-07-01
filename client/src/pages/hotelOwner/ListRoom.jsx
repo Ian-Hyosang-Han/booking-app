@@ -41,7 +41,7 @@ const ListRoom = () => {
 
     return (
         <div>
-            <Title align='left' font='outfit' title='Room Ristings' subtitle='Viewm edit, or manage all listed rooms. Keep the information up-to-date to provide the best experience for users.' />
+            <Title align='left' font='outfit' title='Room Listings' subtitle='Viewm edit, or manage all listed rooms. Keep the information up-to-date to provide the best experience for users.' />
             <p className='text-gray-500 mt-8'>All Rooms</p>
 
             <div className='w-full max-w-3xl text-left border border-gray-300 rounded-lg max-h-80 overflow-y-scroll mt-3'>
