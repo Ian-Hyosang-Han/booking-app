@@ -2,7 +2,7 @@ import transporter from "../configs/Nodemiler.js";
 import Booking from "../models/Booking.js";
 import Hotel from "../models/Hotel.js";
 import Room from "../models/Room.js";
-import Stripe from "stripe";
+import stripe from "stripe";
 
 // Function to Check Availability of Room
 const checkAvailability = async ({ checkInDate, checkOutDate, room }) => {
@@ -147,7 +147,7 @@ export const stripePayment = async ( req, res ) => {
     const totalPrice = booking.totalPrice;
     const { origin } = req.headers;
 
-    const stripeInstance = new Stripe(process.env.STRIPE_SECRET_KEY)
+    const stripeInstance = new stripe(process.env.STRIPE_SECRET_KEY)
 
     const line_items = [
       {
