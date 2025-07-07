@@ -24,7 +24,7 @@ const Hero = () => {
     }
 
     return (
-        <div className='flex flex-col items-start justify-center px-6 md:px-16 lg:px-24 xl:px-32 text-white bg-[url("/src/assets/heroImage.jpg")] bg-no-repeat bg-cover bg-center min-h-screen'>
+        <div className='flex flex-col items-start justify-center px-6 md:px-16 lg:px-24 xl:px-32 text-white bg-[url("/src/assets/heroimage.jpg")] bg-no-repeat bg-cover bg-center min-h-screen'>
             <div className="absolute inset-0 bg-black opacity-50 z-0" />
             <div className='relative z-10 flex flex-col items-start justify-center h-full px-6 md:px-16 lg:px-24 xl:px-32'>
                 <p className='text-sm md:text-base bg-[#49B9FF]/50 px-3.5 py-1 rounded-full mt-23'>The Ultimate Hotel Experience</p>
