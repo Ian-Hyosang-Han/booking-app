@@ -14,8 +14,8 @@ const Navbar = () => {
     const navLinks = [
         { name: 'Home', path: '/' },
         { name: 'Hotels', path: '/rooms' },
-        { name: 'Experience', path: '/' },
-        { name: 'About', path: '/' },
+        { name: 'Experience', path: '/experiences' },
+        { name: 'About Us', path: '/aboutus' },
     ];
 
     const [isScrolled, setIsScrolled] = useState(false);
@@ -25,22 +25,6 @@ const Navbar = () => {
     const location = useLocation()
 
     const { user, navigate, isOwner, setShowHotelReg } = useAppContext()
-
-    // useEffect(() => {
-
-    //     if (location.pathname !== '/') {
-    //         setIsScrolled(true);
-    //     } else {
-    //         setIsScrolled(false);
-    //     }
-    //     setIsScrolled(prev => location.pathname !== '/' ? true : prev);
-
-    //     const handleScroll = () => {
-    //         setIsScrolled(window.scrollY > 10);
-    //     };
-    //     window.addEventListener("scroll", handleScroll);
-    //     return () => window.removeEventListener("scroll", handleScroll);
-    // }, [location.pathname]);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -88,8 +72,7 @@ const Navbar = () => {
 
             {/* Desktop Right */}
             <div className="hidden md:flex items-center gap-4">
-                <img src={assets.searchIcon} alt="search" className={`${isScrolled && 'invert'} h-7 transition-all duration-500`} />
-
+                {/* <img src={assets.searchIcon} alt="search" className={`${isScrolled && 'invert'} h-7 transition-all duration-500`} /> */}
                 {user ?
                     (<UserButton>
                         <UserButton.MenuItems>
@@ -99,9 +82,7 @@ const Navbar = () => {
                     :
                     (<button onClick={openSignIn} className="bg-black text-white px-8 py-2.5 rounded-full ml-4 transition-all duration-500">
                         Login
-                    </button>)
-                }
-
+                    </button>)}
             </div>
 
             {/* Mobile Menu Button */}

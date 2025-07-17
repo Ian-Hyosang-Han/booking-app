@@ -24,14 +24,18 @@ const Hero = () => {
     }
 
     return (
-        <div className='flex flex-col items-start justify-center px-6 md:px-16 lg:px-24 xl:px-32 text-white bg-[url("/src/assets/heroimage.jpg")] bg-no-repeat bg-cover bg-center min-h-screen'>
-            <div className="absolute inset-0 bg-black opacity-50 z-0" />
+        <div className='flex flex-col items-start justify-center px-6 md:px-16 lg:px-24 xl:px-32 text-white bg-no-repeat bg-cover bg-center min-h-screen'>
+            <video autoPlay loop muted className="absolute inset-0 w-full h-full object-cover">
+                <source src="/src/assets/herovideo.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+            <div className="absolute inset-0 bg-black opacity-50" />
             <div className='relative z-10 flex flex-col items-start justify-center h-full px-6 md:px-16 lg:px-24 xl:px-32'>
                 <p className='text-sm md:text-base bg-[#49B9FF]/50 px-3.5 py-1 rounded-full mt-23'>The Ultimate Hotel Experience</p>
-                <h1 className='font-playfair text-2xl md:text-5xl md:text-[56px] md:leading-[56px] font-bold md:font-extrabold max-w-xl mt-4 mr-4 mb-4'>Discover Your Perfect Gateway Destination</h1>
-                <p className='max-w-130 mt-2 text-sm md:text-base'>Unparalleled luxury and comfort await at the world's most exclusive hotels and resorts.  Start your journey today.</p>
+                <p className='max-w-130 mt-2 text-sm md:text-base'>Kick back and relax in comfort at the world's best hotels—your perfect getaway starts now.</p>
+                <h1 className='font-playfair text-2xl md:text-5xl md:text-[56px] md:leading-[56px] font-bold md:font-extrabold max-w-xl mt-2 mr-4 mb-4'>Elevate Your Luxury Vacation Experience</h1>
 
-                <form onSubmit={onSearch} className='bg-white text-gray-500 rounded-lg px-6 py-4 mt-8 flex flex-col md:flex-row max-md:items-start gap-4 max-md:mx-auto'>
+                <form onSubmit={onSearch} className='bg-white text-gray-500 rounded-lg px-6 py-4 mt-2 flex flex-col md:flex-row max-md:items-start gap-4 max-md:mx-auto'>
                     <div>
                         <div className='flex items-center gap-2'>
                             <img src={assets.calenderIcon} alt='' className='h-4' />
