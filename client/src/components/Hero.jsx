@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { assets, cities } from '../assets/assets'
 import { useAppContext } from '../context/AppContext'
+import herovideo from '../assets/herovideo.mp4'
 
 const Hero = () => {
 
@@ -26,7 +27,7 @@ const Hero = () => {
     return (
         <div className='flex flex-col items-start justify-center px-6 md:px-16 lg:px-24 xl:px-32 text-white bg-no-repeat bg-cover bg-center min-h-screen'>
             <video autoPlay loop muted className="absolute inset-0 w-full h-full object-cover">
-                <source src="/src/assets/herovideo.mp4" type="video/mp4" />
+                <source src={herovideo} type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
             <div className="absolute inset-0 bg-black opacity-50" />
